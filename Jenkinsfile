@@ -19,6 +19,10 @@ pipeline {
                         steps {
                             echo "deploy"
                         }
+                         stage(' app release') {
+                                                steps {
+                                                    echo "deploy"
+                                                }
 
         }
     }
