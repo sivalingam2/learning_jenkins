@@ -11,18 +11,11 @@ pipeline {
                  echo "test"
             }
         }
-        stage('Deploy') {
+        stage(' app Deploy') {
             steps {
                 echo "deploy"
             }
-            stage(' app Deploy') {
-                        steps {
-                            echo "deploy"
-                        }
-                         stage(' app release') {
-                                                steps {
-                                                    echo "deploy"
-                                                }
+
 
         }
     }
