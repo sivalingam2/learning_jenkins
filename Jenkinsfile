@@ -2,7 +2,7 @@ pipeline {
 //     agent any
     agent { node { label 'workstation' } }
     tools {
-            maven 'apache-maven-3.0.1'
+            maven 'maven'
         }
     //
     triggers { pollSCM(' */1 * * * *') }
