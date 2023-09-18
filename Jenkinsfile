@@ -6,6 +6,8 @@ pipeline {
         }
         environment {
         url = "google.com"
+         siva = credentials('centos-ssh')
+
         }
 //          options {
 //                 ansiColor('xterm')
@@ -36,6 +38,7 @@ pipeline {
             steps {
                  echo "test"
                  echo url
+                 sh 'env'
             }
         }
         stage(' app Deploy') {
