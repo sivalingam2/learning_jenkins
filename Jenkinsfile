@@ -4,8 +4,9 @@ pipeline {
     tools {
             maven 'maven'
         }
-        environment {}
+        environment {
         url = "google.com"
+        }
 //          options {
 //                 ansiColor('xterm')
 //             }
