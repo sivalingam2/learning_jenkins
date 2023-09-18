@@ -35,7 +35,7 @@ pipeline {
 
             steps {
                  echo "test"
-                 echo url
+                 sh 'url'
             }
         }
         stage(' app Deploy') {
