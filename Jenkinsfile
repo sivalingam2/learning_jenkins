@@ -4,9 +4,9 @@ pipeline {
     tools {
             maven 'maven'
         }
-         options {
-                ansiColor('xterm')
-            }
+//          options {
+//                 ansiColor('xterm')
+//             }
                input {
                             message "Should we continue?"
                             ok "Yes, we should."
