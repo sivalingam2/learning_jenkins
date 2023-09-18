@@ -32,9 +32,7 @@ pipeline {
             }
         }
         stage('Test') {
-         when {
-                        branch 'production'
-                    }
+
             steps {
                  echo "test"
                  echo "url"
