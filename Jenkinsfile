@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+//     agent any
+    agent { node { label 'workstation' } }
     stages {
         stage('Build') {
             steps {
@@ -19,4 +20,9 @@ pipeline {
 
         }
     }
+     post {
+            always {
+                echo 'I will always say Hello again!'
+            }
+        }
 }
