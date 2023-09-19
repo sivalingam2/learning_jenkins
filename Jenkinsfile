@@ -106,7 +106,11 @@
 //     }
 // }
 node{'workstation'} {
-stage('build') {}
 def x =10
+stage('build') {
+
+
+
 print x
+}
 }
