@@ -105,7 +105,7 @@
 //         }
 //     }
 // }
-node{'workstation'} {
+node('workstation') {
 def x =10
 stage('build') {
 
