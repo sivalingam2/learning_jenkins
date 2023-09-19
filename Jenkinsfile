@@ -1,61 +1,61 @@
-pipeline {
-//     agent any
-    agent { node { label 'workstation' } }
-    tools {
-            maven 'maven'
-        }
-        environment {
-        url = "google.com"
-         siva = credentials('centos-ssh')
-
-        }
-//          options {
-//                 ansiColor('xterm')
+// pipeline {
+// //     agent any
+//     agent { node { label 'workstation' } }
+//     tools {
+//             maven 'maven'
+//         }
+//         environment {
+//         url = "google.com"
+//          siva = credentials('centos-ssh')
+//
+//         }
+// //          options {
+// //                 ansiColor('xterm')
+// //             }
+//
+//     //
+//     triggers { pollSCM(' */1 * * * *') }
+//         parameters {
+//             string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+//   }
+//     stages {
+//         stage('Build') {
+// //           input {
+// //                                     message "Should we continue?"
+// //                                     ok "Yes, we should."
+// //                                     submitter "alice,bob"
+// //                                     parameters {
+// //                                         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+// //                                     }
+// //                                 }
+//             steps {
+//                 echo "build"
+//                 sh 'mvn --version'
 //             }
-
-    //
-    triggers { pollSCM(' */1 * * * *') }
-        parameters {
-            string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-  }
-    stages {
-        stage('Build') {
-//           input {
-//                                     message "Should we continue?"
-//                                     ok "Yes, we should."
-//                                     submitter "alice,bob"
-//                                     parameters {
-//                                         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-//                                     }
-//                                 }
-            steps {
-                echo "build"
-                sh 'mvn --version'
-            }
-        }
-        stage('Test') {
-
-            steps {
-                 echo "test"
-                 echo url
-                 sh 'env'
-            }
-        }
-        stage(' app Deploy') {
-            steps {
-                echo "deploy"
-            }
-
-
-        }
-    }
-     post {
-            always {
-                echo 'I will always say Hello again!'
-                echo 'send email'
-            }
-        }
-}
+//         }
+//         stage('Test') {
+//
+//             steps {
+//                  echo "test"
+//                  echo url
+//                  sh 'env'
+//             }
+//         }
+//         stage(' app Deploy') {
+//             steps {
+//                 echo "deploy"
+//             }
+//
+//
+//         }
+//     }
+//      post {
+//             always {
+//                 echo 'I will always say Hello again!'
+//                 echo 'send email'
+//             }
+//         }
+// }
 // pipeline {
 //     agent any
 //     stages {
@@ -105,3 +105,8 @@ pipeline {
 //         }
 //     }
 // }
+node{'workstation'} {
+stage('build') {}
+def x =10
+print x
+}
