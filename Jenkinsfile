@@ -119,7 +119,7 @@ stage('build') {
  }
   }else {
  stage('test1') {
-  print x
+
   }
 
 }
