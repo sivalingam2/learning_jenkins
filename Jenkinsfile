@@ -108,9 +108,6 @@
 node('workstation') {
 def x =10
 stage('build') {
-
-
-
 print x
 }
 }
