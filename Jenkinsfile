@@ -116,7 +116,8 @@ stage('build') {
  print x
  sh 'echo y - ${y}'
  sample()
- } else {
+ }
+  }else {
  stage('test1') {
   print x
   }
