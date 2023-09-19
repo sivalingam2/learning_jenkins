@@ -111,7 +111,7 @@ print "XYZ function"
 node('workstation') {
 def x = 10
 env.y = 20
-if (x .10) {
+if (x > 10) {
 stage('build') {
  print x
  sh 'echo y - ${y}'
