@@ -105,11 +105,16 @@
 //         }
 //     }
 // }
+
 node('workstation') {
-def x =10
-env.y=20
+def x = 10
+env.y = 20
+def sample() {
+print "XYZ function"
+}
 stage('build') {
 print x
 sh 'echo y - ${y}'
+sample()
 }
 }
