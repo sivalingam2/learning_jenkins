@@ -105,24 +105,44 @@
 //         }
 //     }
 // }
-def sample() {
-print "XYZ function"
-}
-node('workstation') {
-def x = 10
-env.y = 20
-if (x > 10) {
-stage('build') {
- print x
- sh 'echo y - ${y}'
- sample()
- }
-  }else {
- stage('test1') {
-
-  }
-
-}
-
-
+// def sample() {
+// print "XYZ function"
+// }
+// node('workstation') {
+// def x = 10
+// env.y = 20
+// if (x > 10) {
+// stage('build') {
+//  print x
+//  sh 'echo y - ${y}'
+//  sample()
+//  }
+//   }else {
+//  stage('test1') {
+//
+//   }
+//
+// }
+//
+//
+// }
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'building'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'deploy'
+            }
+        }
+    }
 }
