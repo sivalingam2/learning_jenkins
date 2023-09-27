@@ -139,7 +139,7 @@ pipeline {
                 echo 'testing'
             }
         }
-        stage('Deploy') {
+        stage(' app Deploy') {
             steps {
                 echo 'deploy'
             }
