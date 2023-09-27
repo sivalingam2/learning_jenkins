@@ -147,6 +147,7 @@ pipeline {
                         steps {
                             echo 'deploy'
                         }
+                        }
         }
     }
 }
