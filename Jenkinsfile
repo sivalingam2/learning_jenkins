@@ -143,6 +143,10 @@ pipeline {
             steps {
                 echo 'deploy'
             }
+            stage(' app ') {
+                        steps {
+                            echo 'deploy'
+                        }
         }
     }
 }
